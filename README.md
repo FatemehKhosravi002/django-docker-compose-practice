@@ -1,66 +1,35 @@
-
 # Django Docker Compose Practice
 
-یک پروژه ساده Django با PostgreSQL که با Docker Compose اجرا می‌شود.  
-هدف تمرین راه‌اندازی سریع و مدیریت متغیرهای محیطی است.
+This is a simple Django project connected to PostgreSQL using Docker Compose.  
+Nothing fancy here — just me practicing Docker Compose, environment variables, and how to get a Django app talking to a database inside containers.
 
 ---
 
-## پیش‌نیازها
+## What’s inside?
 
-- Docker و Docker Compose نصب شده
-- کلید SSH برای GitHub (اگر می‌خوای با SSH پوش کنی)
-
----
-
-## اجرا
-
-1. مخزن را کلون کن:
-
-```bash
-git clone git@github.com:fatemehkhosravi002/django-docker-compose-practice.git
-cd django-docker-compose-practice
-```
-
-2. فایل `.env` بساز و متغیرها را وارد کن (می‌توانی از `.env.example` استفاده کنی):
-
-```env
-SECRET_KEY=your_secret_key_here
-POSTGRES_DB=testdb
-POSTGRES_USER=bahar
-POSTGRES_PASSWORD=Bfafa1381
-POSTGRES_HOST=db
-POSTGRES_PORT=5432
-```
-
-3. کانتینرها را اجرا کن:
-
-```bash
-docker compose up --build
-```
-
-4. در مرورگر برو به:
-
-```
-http://localhost:8000/hello/YourName/
-```
+- A basic Django app running inside Docker  
+- PostgreSQL running in a separate container  
+- Environment variables managed with a `.env` file  
+- Easy to spin up and tear down with `docker compose up`
 
 ---
 
-## نکات
+## Why?
 
-- فایل `.env` نباید به گیت پوش شود.  
-- اگر پورت 5432 اشغال است، در `docker-compose.yml` تغییرش بده.  
-- پروژه برای تمرین است، مناسب production نیست.
-
----
-
-## مشارکت
-
-اگر پیشنهادی داری، Pull Request خوش‌آمد است!
+Because sometimes the best way to learn is to build something small, make mistakes, fix them, and have fun along the way!  
+No production magic here — just my playground for Docker + Django.
 
 ---
 
-## تماس
+## Quick Start
 
-برای سوالات با من در تماس باش
+Just run `docker compose up --build` and visit `http://localhost:8000/hello/YourName/` to see it in action.
+
+---
+
+## Note
+- If port 5432 is busy on your machine, tweak it in `docker-compose.yml`.  
+---
+
+Enjoy the ride! 🚀
+
