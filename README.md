@@ -1,4 +1,5 @@
 # Django Docker Compose Practice
+![Output Screenshot](logs.png)
 
 This is a simple Django project connected to PostgreSQL using Docker Compose.  
 Nothing fancy here — just me practicing Docker Compose, environment variables, and how to get a Django app talking to a database inside containers.
